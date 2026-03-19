@@ -27,3 +27,8 @@ Single-player 2D cricket batting app built with React and Vite. Each delivery is
 ## Tech stack
 - React 19 + Vite
 - CSS animations and DOM-based rendering (no external canvas libs)
+
+## How it works
+- **Game logic**: Two batting styles load fixed probability tables. A slider sweeps continuously across the power bar; when you click, the slider position chooses the outcome segment deterministically (no RNG). Runs/wickets/balls update, innings end after 12 balls or 2 wickets, and a restart resets state.
+- **Power bar mapping**: Each outcome has a probability (e.g., Aggressive: Wicket 0.35, 0s 0.10, 1s 0.12...). Segments are rendered with widths equal to their probability share, and a moving slider’s position (0–1) is compared against segment ranges to pick the result.
+- **Animations**: Bowling uses a CSS keyframe path with subtle trail; bat swing is a rotation keyframe; slider pulses and moves via requestAnimationFrame-driven state; field flashes for hits/wickets; gradients build the ground, pitch, and stumps for performance-friendly visuals.
