@@ -155,6 +155,11 @@ function App() {
 
   return (
     <div className="app">
+      <div className="sticky-note" aria-label="Student details sticky note">
+        <p className="sticky-title">Muhammad Zain Imran</p>
+        <p className="sticky-line">Roll: 23i-0855</p>
+        <p className="sticky-line">Section: CS-D</p>
+      </div>
       <header className="topbar">
         <div>
           <p className="eyebrow">CS-4032 · 2D Cricket Web App</p>

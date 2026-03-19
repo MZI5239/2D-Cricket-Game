@@ -4,6 +4,33 @@
   gap: 18px;
 }
 
+.sticky-note {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  width: 200px;
+  padding: 14px 16px 16px;
+  background: linear-gradient(160deg, #fff7c2 0%, #ffe89a 55%, #ffd86f 100%);
+  color: #2b1f0b;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), inset 0 -8px 18px rgba(0, 0, 0, 0.12);
+  transform: rotate(-1.8deg);
+  z-index: 4;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sticky-title {
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #1a150c;
+}
+
+.sticky-line {
+  margin: 0;
+  font-size: 14px;
+  color: #3b2e16;
+}
+
 .topbar {
   background: linear-gradient(135deg, #11213a, #0f182b);
   border: 1px solid var(--border);
