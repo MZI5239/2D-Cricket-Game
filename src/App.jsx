@@ -214,10 +214,18 @@ function App() {
             <div className="stands"></div>
             <div className="crowd"></div>
             <div className={`field ${flash ? `flash-${flash}` : ''}`}>
+              <div className="boundary-rope" aria-hidden="true"></div>
+              <div className="inner-ring" aria-hidden="true"></div>
               <div className="pitch">
-                <div className="crease"></div>
+                <div className="crease front" aria-hidden="true"></div>
+                <div className="crease back" aria-hidden="true"></div>
                 <div className={`bat ${swinging ? 'swing' : ''}`}></div>
-                <div className="stumps" aria-hidden="true"></div>
+                <div className="stumps" aria-hidden="true">
+                  <div className="bails"></div>
+                  <div className="stump left"></div>
+                  <div className="stump mid"></div>
+                  <div className="stump right"></div>
+                </div>
                 <div key={ballKey} className="ball" aria-hidden="true"></div>
               </div>
             </div>
